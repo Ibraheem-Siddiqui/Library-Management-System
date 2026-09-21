@@ -35,7 +35,7 @@ javac -version
 
 ### Compile and run
 
-Download or clone the repository, open a terminal in the project folder, and run:
+Download or clone the repository, open a terminal in the project folder, cd to the highest level file it's stored in (Desktop, Downloads, etc.), and run:
 
 ```bash
 cd Library-Management-System-Main
