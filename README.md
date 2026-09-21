@@ -35,11 +35,9 @@ javac -version
 
 ### Compile and run
 
-Download or clone the repository, open a terminal in the project folder, cd to the highest level file it's stored in (Desktop, Downloads, etc.), and run:
+Download or clone the repository, open a terminal in the project folder, and run:
 
 ```bash
-cd Library-Management-System-Main
-cd lib_mng_sys
 javac Book.java Fiction.java NonFiction.java Patron.java Library.java Main.java
 java Main
 ```
