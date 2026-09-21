@@ -67,7 +67,7 @@ Type the number of an option and press Enter. When you choose Exit, the program 
 | `Main.java` | Console interface and menu logic |
 | `Library.java` | Loads and saves data, keeps the catalog sorted, and handles searching, borrowing, returning, and holds |
 | `Book.java` | Book class, input validation, and comparison logic |
-| `Fiction.java`, `NonFiction.java` | Subclasses of `Book` used to keep separate Fiction and Non-Fiction lists. Redundant, but inheritance had to be implemented in some way for the assignment |
+| `Fiction.java`, `NonFiction.java` | Subclasses of `Book` used to keep separate Fiction and Non-Fiction lists. Redundant, but the assignment required inheritance |
 | `Patron.java` | Patron class and patron validation and search |
 | `library.csv` | Book catalog (title, author, barcode, call number, ISBN, status, patron, hold status) |
 | `patrons.csv` | Patron records (student number, phone number, email, books checked out) |
