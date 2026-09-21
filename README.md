@@ -1,10 +1,8 @@
 # Library Management System
 
-A menu-driven Java console application for managing a library catalog and its patrons. It lets a librarian borrow, return, and place holds on books, and add, remove, search, and print books from a catalog of 11,000+ records stored in CSV files.
+A menu-driven Java console application for managing a library catalog and its patrons. It lets a user borrow, return, and place holds on books, and add, remove, search, and print books from a catalog of 11,000+ records stored in CSV files.
 
 Built as a two-person project for ICS4U1 (Computer Science) at Don Mills Collegiate Institute, May to June 2025.
-
-<!-- Add a screenshot here: drag a picture of the main menu into the GitHub editor, or use ![Main menu](screenshot.png) -->
 
 ## Features
 
