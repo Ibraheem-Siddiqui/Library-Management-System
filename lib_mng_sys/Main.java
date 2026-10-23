@@ -121,7 +121,6 @@ public class Main
 		* boolean exit - stores whether the user wishes to exit
 		* boolean validChoice - stores if the users input is a valid option
 		* boolean holdChoice - stores if menu input for the hold menu is valid
-		* boolean validIntInput - stores if integer input is valid
 		* int patronIndex - stores the index of a patron that is being searched
 		* for
 		* Patron tempPatron - temporary patron used as an argument for methods
@@ -152,7 +151,6 @@ public class Main
 		boolean exit = false;
 		boolean validChoice = false;
 		boolean holdChoice = false;
-		boolean validIntInput = false;
 		int patronIndex;
 		Patron tempPatron;
 		String tempSNum = "";
@@ -1396,23 +1394,10 @@ public class Main
 														choice = input.nextLine();
 
 														// Forcing them to enter a number from the book list
-														while(!validIntInput)
+														while(!(isNum(choice) && (Integer.parseInt(choice) >= 1 && Integer.parseInt(choice) <= tempBookArrList.size())))
 														{
-															if(!isNum(choice))
-															{
-																System.out.print("\nInvalid Choice\nWhich book would you like to borrow: ");
-																choice = input.nextLine();
-																continue;
-															} // end if
-
-															if(!(Integer.parseInt(choice) >= 1 && Integer.parseInt(choice) <= tempBookArrList.size()))
-															{
-																System.out.print("\nInvalid Choice\nWhich book would you like to borrow: ");
-																choice = input.nextLine();
-																continue;
-															} // end if
-
-															validIntInput = true;
+															System.out.print("\nInvalid Choice\nWhich book would you like to borrow: ");
+															choice = input.nextLine();
 														} // end while
 
 														// Printing out the book
