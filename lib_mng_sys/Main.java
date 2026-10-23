@@ -1047,26 +1047,10 @@ public class Main
 														choice = input.nextLine();
 
 														//repeat until input is valid
-														while(!validIntInput)
+														while(!(isNum(choice) && (Integer.parseInt(choice) >= 1 && Integer.parseInt(choice) <= tempBookArrList.sizes())))
 														{
-															//tell the user if their input is not a number
-															if(!isNum(choice))
-															{
-																System.out.print("\nInvalid Choice\nWhich book would you like to borrow: ");
-																choice = input.nextLine();
-																continue;
-															} // end if
-
-															//tell the user that their choice is invalid
-															if(!(Integer.parseInt(choice) >= 1 && Integer.parseInt(choice) <= tempBookArrList.size()))
-															{
-																System.out.print("\nInvalid Choice\nWhich book would you like to borrow: ");
-																choice = input.nextLine();
-																continue;
-															} // end if
-
-															//set validIntInput to true
-															validIntInput = true;
+															System.out.print("\nInvalid Choice\nWhich book would you like to borrow: ");
+															choice = input.nextLine();
 														} // end while
 
 														//print out the temp book and ask the user if they would like to check it out
