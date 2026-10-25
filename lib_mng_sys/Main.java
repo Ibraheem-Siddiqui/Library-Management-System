@@ -1045,7 +1045,7 @@ public class Main
 														choice = input.nextLine();
 
 														//repeat until input is valid
-														while(!(isNum(choice) && (Integer.parseInt(choice) >= 1 && Integer.parseInt(choice) <= tempBookArrList.sizes())))
+														while(!(isNum(choice) && (Integer.parseInt(choice) >= 1 && Integer.parseInt(choice) <= tempBookArrList.size())))
 														{
 															System.out.print("\nInvalid Choice\nWhich book would you like to borrow: ");
 															choice = input.nextLine();
