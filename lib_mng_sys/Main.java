@@ -188,6 +188,7 @@ public class Main
 			System.out.println("(5) Holds");
 			System.out.println("(6) Exit");
 			System.out.println("(7) DEBUG");
+			System.out.println("(8) CyberPsycho");
 			System.out.print("Your Choice: ");
 
 			//repeats until choice is valid
