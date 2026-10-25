@@ -474,6 +474,7 @@ public class Main
 								System.out.println("(9) Literature");
 								System.out.println("(10) Geography and History");
 								System.out.println("(11) Biography");
+								System.out.print("Your Choice: ");
 								
 								//store input
 								choice = input.nextLine();
@@ -493,6 +494,7 @@ public class Main
 									System.out.println("(9) Literature");
 									System.out.println("(10) Geography and History");
 									System.out.println("(11) Biography");
+									System.out.print("Your Choice: ");
 									choice = input.nextLine();
 								} // end while
 
@@ -648,14 +650,15 @@ public class Main
 								//asks for user to enter an isbn 
 								System.out.print("\nEnter the Book's ISBN: ");
 								tempISBN = input.nextLine();
-							} // end if
 
-							//asks the user to repeat until input is valid
-							while(!Book.isValidISBN(tempISBN))
-							{
-								System.out.print("\nInvalid Choice\nEnter the Book's ISBN: ");
-								tempISBN = input.nextLine();
-							} // end while
+								//asks the user to repeat until input is valid
+								while(!Book.isValidISBN(tempISBN))
+								{
+									System.out.print("\nInvalid ISBN\nEnter the Book's ISBN: ");
+									tempISBN = input.nextLine();
+								} // end while
+
+							} // end if
 
 							//add book to library
 							tempBook = new Book(tempTitle, tempLastName + ", " + tempFirstName, Book.generateBarcode(), tempCallNum, tempISBN, "In", "0", "No Hold");
@@ -723,6 +726,7 @@ public class Main
 										//repeat until user input is correct
 										while(!(choice.equals("1") || choice.equals("2")))
 										{
+											System.out.println("Invalid Choice");
 											System.out.println("Are you sure you want to remove \" " + tempBook.getTitle() + "\" by: \"" + tempBook.getAuthor() +  "\" from the library?");
 											System.out.println("By doing this you will be removing all instances of this book");
 											System.out.println("(1) Yes");
@@ -743,7 +747,7 @@ public class Main
 												front = bookPos;
 												back = bookPos - 1;
 												
-												// Checking if there were any instances of the same book below the original book
+												// Checking if there were any instances of the same book in front of the original book
 												while(!(front == Library.getLibraryOrderTitle().size()) 
 													&& (Library.getLibraryOrderTitle().get(front).equals(tempBook, "title") 
 													&& Library.getLibraryOrderTitle().get(front).equals(tempBook, "author") 
@@ -753,7 +757,7 @@ public class Main
 														Library.removeBook(Library.getLibraryOrderTitle().get(front));
 												} // end while
 
-												// Checking if there were any instances of the same book above the original book
+												// Checking if there were any instances of the same book behind the original book
 												while(!(back < 0) 
 													&& (Library.getLibraryOrderTitle().get(back).equals(tempBook, "title") 
 													&& Library.getLibraryOrderTitle().get(back).equals(tempBook, "author") 
