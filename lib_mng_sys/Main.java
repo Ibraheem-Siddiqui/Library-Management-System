@@ -1262,7 +1262,7 @@ public class Main
 																		else
 																		{
 																			//prompt the user to enter the new dewey decimal number
-																			System.out.println("\nEnter -1 to return to main menu\nEnter the new Dewey Decimal of the number: ");
+																			System.out.print("\nEnter -1 to return to main menu\nEnter the new Dewey Decimal of the number: ");
 																			choice = input.nextLine();
 
 																			//while the choice is not to return or the input is valid 
