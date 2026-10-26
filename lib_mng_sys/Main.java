@@ -62,8 +62,7 @@ public class Main
 		try
 		{
 			//try to parse the number and if it succeeds num is a number
-			Integer.parseInt(num);
-
+			Double.parseDouble(num);
 		}
 		catch(Exception e)
 		{
