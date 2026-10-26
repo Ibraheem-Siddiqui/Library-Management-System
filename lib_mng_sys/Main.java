@@ -1954,13 +1954,13 @@ public class Main
 																{
 																	// User can return to main menu by entering -1
 																	// Asking the user to enter an appropriate dewey decimal
-																	System.out.println("\nEnter -1 to return to main menu\nEnter the new Dewey Decimal of the number: ");
+																	System.out.print("\nEnter -1 to return to main menu\nEnter the new Dewey Decimal of the number: ");
 																	choice = input.nextLine();
 
 																	// Forcing the user to enter an appropriate dewey decimal
 																	while(!(choice.equals("-1")) && (!isNum(choice) || !(Double.parseDouble(choice) > 0 && Double.parseDouble(choice) < 1000)))
 																	{
-																		System.out.println("\nInvalid Input\nEnter -1 to return\nEnter the new Dewey Decimal of the number: ");
+																		System.out.print("\nInvalid Input\nEnter -1 to return\nEnter the new Dewey Decimal of the number: ");
 																		choice = input.nextLine();
 																	} // end while
 
